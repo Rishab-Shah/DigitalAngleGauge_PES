@@ -8,10 +8,12 @@ The DAG has following features:
 1. When initialised it asks for manual intervention to one time set it to 0 degree.
 2. The user will get visual feedback through onboard LED's driven by a PWM. These LED's are lit momentarily and only when one of teh below angle is reached. The user has to try to roll the FRDM by it;s long edge:
 Following are the different angles:
+`
     a. Red - 30 degree.
     b. Green - 45 degree.
     c. Blue - 60 degree.
     d. White - 90 degree.
+`
 3. The user can press switch (external) to enter into a calibration state and recaibrate the relative reference and see the angle deviation w.r.t that reference and the LED will glow as described in point 2.
 4. To calibrate the relative reference, the user has to press on the capacitive touch slider and again go through the point 2.
 5. Typing the insight command in the command processor will give the current reference angle set on the display device(teraterm)
@@ -19,20 +21,21 @@ Following are the different angles:
 ### Notes
 * Please refer `submitted-for-review` tag in github to download
 * Only the .c and .h files are uploaded. The Debug folder is not uploaded.
-* The start_play_back function is used directly with only buffer name modified. Comments and additonal features are added.
-* The outputs are present in the screenshot folder. A text file log is added named - 
-* A vdeo is uploaded for the assignment.
 * Only the required functions are exposed. Rest functions has static keyword assigned to restrict the file scope
 * The macros are used in .h file and are used only if they are required in more than one module. Ex : CBFIFO_SIZE,PWM_PERIOD,SYSCLOCK_FREQUENCY
 * All the function headers are desribed in .c file
 * Only if required, a strucutre is used in .h file as required in multiple files.
 * Every extra file will be found in AdditionalUploads
+* A vdeo is uploaded for the assignment on drive due to size limit of github. PLease refer the below link for video.
+
+Video::
+* https://drive.google.com/file/d/1TawD1rPZjKu5vV11TEgmbDbBuWgwZve0/view?usp=sharing
 
 ### Technical description
 * Code implemented for Digital Angle Gauge for achieving 45 degree. It was mentioned to implement the code for 45 degree angle where as the current implementation is for 30,45,60 and 90. Also, the idea was very bried with that time.
-* The current current implementation has more features than the one's mentioned and it has gone slight modification in the displa behaviour as ideas are shaped to better the system with develpment as state machine is also introduced.
+* The current current implementation has more features than the one's mentioned and it has gone slight modification in the display behaviour as ideas are shaped to better the system with develpment as state machine is also introduced.
 * The features are as the one mentined above in project description.
-* Refer attached diagram for state machine behavior
+* Refer attached diagram for state machine behavior in (AdditionalUploads folder)
 
 ### Quick Teramterm settings:
 A teraterm with following settings is required.
@@ -53,6 +56,7 @@ Following modules are tested:
 3. The changing of LED color as per the angle value passed, is verified.Even negative values are verified.
 4. After all the testing. A 0 degree calibration for MMA8451 is performed for the roll value to bring it to ground reference. The LED color is in blue.
 5. Only when successful calibration to 0 degree angle occurs, a green color LED is lit momentarily.
+6. There is a manual test case sheet (excel) uplaoded describing the accerometer and state machine transition as well as touch sensor and switch verification test cases.(AdditionalUploads folder)
 
 
 ### File description
@@ -73,10 +77,9 @@ Following modules are tested:
 * `uart.c,uart.h:` Set uart in interrupt mode for the settings mentioned in quick teraterm settings.
 
 ### Futurescope:
-Add a cusomised angle setting through command processor.
-Add a buzzer to sound at the exact angle.
-Add more test cases for each module.
-There is a manual test case sheet (excel) uplaoded describing the accerometer and state machine transition as well as touch sensor and switch verification test cases (8)
+1.Add a cusomised angle setting through command processor.
+2.Add a buzzer to sound at the exact angle.
+3.Add more test cases for each module.
 
 ### Environment
 * IDE: MCUXpressso
