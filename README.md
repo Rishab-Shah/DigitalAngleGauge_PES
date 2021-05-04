@@ -26,7 +26,7 @@ Following are the different angles:
 * The macros are used in .h file and are used only if they are required in more than one module. Ex : CBFIFO_SIZE,PWM_PERIOD,SYSCLOCK_FREQUENCY
 * All the function headers are desribed in .c file
 * Only if required, a strucutre is used in .h file as required in multiple files.
-* Every extra file will be found in 
+* Every extra file will be found in AdditionalUploads
 
 ### Technical description
 * Code implemented for Digital Angle Gauge for achieving 45 degree. It was mentioned to implement the code for 45 degree angle where as the current implementation is for 30,45,60 and 90. Also, the idea was very bried with that time.
