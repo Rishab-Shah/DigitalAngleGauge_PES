@@ -26,6 +26,7 @@ static void insight_command_handler(const char *datareceived);
 GLobal variables, structures
 *******************************************************************************/
 int reference_angle = 0;
+int ref_setting_status = 0;
 
 typedef void (*command_handler_t)(const char* datareceived);
 
@@ -178,7 +179,15 @@ static void unknown_command_handler(const char *datareceived)
 *******************************************************************************/
 static void insight_command_handler(const char *datareceived)
 {
-	printf("\r\nReference value set is %d\r\n",reference_angle);
+	if(ref_setting_status == 1)
+	{
+		printf("\r\nReference value set is %d\r\n",reference_angle);
+	}
+	else
+	{
+		printf("\r\nReference yet to be set\r\n");
+	}
+
 }
 
 /*******************************************************************************
@@ -190,6 +199,7 @@ static void insight_command_handler(const char *datareceived)
 void set_reference_angle(int ref_rcvd )
 {
 	reference_angle = ref_rcvd;
+	ref_setting_status = 1;
 }
 
 /* EOF */
