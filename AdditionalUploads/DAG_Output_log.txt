@@ -1,0 +1,95 @@
+ 
+# Welcome to Digital Angle Gauge!
+All modules are initialized
+Testing started
+test_cbfifo: passed 632/632 test cases
+LED Max Red value validated
+LED Max Green value validated
+LED Max Blue value validated
+All LED ON validated
+All LED OFF validated
+White LED min to max validated
+White LED max to min validated
+All LED tests complete
+Angle 0 not detected as not present. No color lit.
+30 degree detected
+Angle 30 detected. Red color lit.
+45 degree detected
+Angle 45 detected. Green color lit.
+60 degree detected
+Angle 60 detected. Blue color lit.
+90 degree detected
+Angle 90 detected. White color lit.
+Invalid angle. No color lit.
+Testing complete
+Please finalize your ground reference to 0 by trying to align FRDM parallel to ground
+Once aligned the LED will change to green and then go off!
+# Reference value is 0
+Roll value is 0
+Calibration done for ZERO
+CS::INIT_STATE, NS::ANGLE_DISPLAY_STATE
+Roll FRDM to detect 30,45,60,90 degree angle
+Press button between PTD3 and ground to reset the reference level
+30 degree detected
+45 degree detected
+60 degree detected
+90 degree detected
+30 degree detected
+30 degree detected
+45 degree detected
+60 degree detected
+60 degree detected
+90 degree detected
+45 degree detected
+30 degree detected
+30 degree detected
+30 degree detected
+CS::ANGLE_DISPLAY_STATE SWITCH TAP detected
+CS::ANGLE_DISPLAY_STATE, NS::CALIBRATE_STATE
+Press touch slider to set new reference!
+
+# authr
+Unknown command: authr
+# author
+Rishab Shah
+# insight
+Reference value set is 0
+# CS::CALIBRATE STATE CAP TAP detected
+CS::CALIBRATE_STATE, NS::ANGLE_DISPLAY_STATE
+Roll FRDM to detect 30,45,60,90 degree angle
+Press button between PTD3 and ground to reset the reference level
+
+# insight
+Reference value set is 41
+# 30 degree detected
+30 degree detected
+30 degree detected
+45 degree detected
+45 degree detected
+60 degree detected
+90 degree detected
+90 degree detected
+90 degree detected
+45 degree detected
+CS::ANGLE_DISPLAY_STATE SWITCH TAP detected
+CS::ANGLE_DISPLAY_STATE, NS::CALIBRATE_STATE
+Press touch slider to set new reference!
+CS::CALIBRATE STATE CAP TAP detected
+CS::CALIBRATE_STATE, NS::ANGLE_DISPLAY_STATE
+Roll FRDM to detect 30,45,60,90 degree angle
+Press button between PTD3 and ground to reset the reference level
+30 degree detected
+45 degree detected
+60 degree detected
+90 degree detected
+CS::ANGLE_DISPLAY_STATE SWITCH TAP detected
+CS::ANGLE_DISPLAY_STATE, NS::CALIBRATE_STATE
+Press touch slider to set new reference!
+CS::CALIBRATE STATE CAP TAP detected
+CS::CALIBRATE_STATE, NS::ANGLE_DISPLAY_STATE
+Roll FRDM to detect 30,45,60,90 degree angle
+Press button between PTD3 and ground to reset the reference level
+30 degree detected
+30 degree detected
+30 degree detected
+45 degree detected
