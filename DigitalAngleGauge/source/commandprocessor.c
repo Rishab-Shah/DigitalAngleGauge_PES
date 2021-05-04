@@ -21,9 +21,12 @@ Function declarations
 static void author_command_handler(const char *datareceived);
 static void help_command_handler(const char *datareceived);
 static void unknown_command_handler(const char *datareceived);
+static void insight_command_handler(const char *datareceived);
 /*******************************************************************************
 GLobal variables, structures
 *******************************************************************************/
+int reference_angle = 0;
+
 typedef void (*command_handler_t)(const char* datareceived);
 
 typedef struct
@@ -35,9 +38,12 @@ typedef struct
 
 static const command_table_t commands[] =
 {
-	{"author" ,author_command_handler  ,"Print the author\r\n	 <no parameters>"									},
-	{"help"	  ,help_command_handler	   ,"Print this help message\r\n	 <no parameters>"							},
+	{"author"  ,author_command_handler     ,"Print the author\r\n	 <no parameters>"									},
+	{"insight" ,insight_command_handler    ,"Print the relative reference angle\r\n	 <no parameters>"					    },
+	{"help"	   ,help_command_handler	   ,"Print this help message\r\n	 <no parameters>"							},
 };
+
+
 /*******************************************************************************
 Function Definitions
 *******************************************************************************/
@@ -162,6 +168,28 @@ static void unknown_command_handler(const char *datareceived)
 	{
 		printf("\r\nUnknown command: %s",datareceived);
 	}
+}
+
+/*******************************************************************************
+* @Function Name: insight_command_handler
+* @Description: gives the value of the reference angle set currently
+* @input param : command received
+* @return: None
+*******************************************************************************/
+static void insight_command_handler(const char *datareceived)
+{
+	printf("\r\nReference value set is %d\r\n",reference_angle);
+}
+
+/*******************************************************************************
+* @Function Name: set_reference_angle
+* @Description: sets the reference value
+* @input param : the mma roll value received
+* @return: None
+*******************************************************************************/
+void set_reference_angle(int ref_rcvd )
+{
+	reference_angle = ref_rcvd;
 }
 
 /* EOF */

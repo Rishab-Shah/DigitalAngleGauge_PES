@@ -18,12 +18,8 @@
 #include <math.h>
 #include "i2c.h"
 /*******************************************************************************
- Macros
+ Structures
 *******************************************************************************/
-#define REG_WHOAMI 						0x0D
-#define WHOAMI 							0x1A
-#define REG_CTRL4  						0x2D
-
 typedef struct accl_param
 {
 	int x;

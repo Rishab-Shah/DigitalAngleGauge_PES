@@ -22,5 +22,6 @@ Function declaration
 *******************************************************************************/
 void acceptinput();
 void lexical_analysis(uint8_t *cmdProessor);
+void set_reference_angle(int ref_rcvd );
 
 #endif /* COMMANDPROCESSOR_H_ */

@@ -42,7 +42,7 @@ void test_modules()
 
 /*******************************************************************************
 * @Function Name: test_angle_gauge_color
-* @Description: Tests the angle detection feature fo rteh color indicated
+* @Description: Tests the angle detection feature for the color indicated
 * @input param: None
 * @return: None
 *******************************************************************************/
@@ -77,6 +77,12 @@ void test_angle_gauge_color()
 	reset_timer();
 	while(get_timer() < SEC_1);
 	printf("Angle 90 detected. White color lit.\r\n");
+
+	/* angle -1 test case */
+	angle_detect_color_assign(-1);
+	reset_timer();
+	while(get_timer() < SEC_1);
+	printf("Invalid angle. No color lit.\r\n");
 
 }
 

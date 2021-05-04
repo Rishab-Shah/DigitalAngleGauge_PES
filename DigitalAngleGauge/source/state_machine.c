@@ -104,9 +104,12 @@ eDigitalAngleGaugeState handle_calibrate_to_zero()
 		reset_timer();
 		while(get_timer() < MSEC_250);
 
+
 		printf("Reference value is %d\r\n",(int)mma_accl_param.ref_roll_val);
 		printf("Roll value is %d\r\n",(int)mma_accl_param.roll_val);
 		printf("Calibration done for ZERO\r\n");
+
+		set_reference_angle((int)mma_accl_param.ref_roll_val);
 
 		return ANGLE_DISPLAY_STATE;
 	}
@@ -138,6 +141,8 @@ eDigitalAngleGaugeState handle_calibrate_state()
 		{
 			mma_accl_param.ref_roll_val = mma_accl_param.ref_roll_val*(-1);
 		}
+
+		set_reference_angle((int)mma_accl_param.ref_roll_val);
 
 		return ANGLE_DISPLAY_STATE;
 	}
