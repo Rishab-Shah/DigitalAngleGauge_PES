@@ -28,7 +28,7 @@ Following are the different angles:
 * Every extra file will be found in AdditionalUploads
 * A vdeo is uploaded for the assignment on drive due to size limit of github. PLease refer the below link for video.
 
-Video::
+### Video::
 * [Link to Project Video](https://drive.google.com/file/d/1TawD1rPZjKu5vV11TEgmbDbBuWgwZve0/view?usp=sharing)
 
 ### Technical description
