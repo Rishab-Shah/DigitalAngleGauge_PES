@@ -29,7 +29,7 @@ Following are the different angles:
 * A vdeo is uploaded for the assignment on drive due to size limit of github. PLease refer the below link for video.
 
 Video::
-* https://drive.google.com/file/d/1TawD1rPZjKu5vV11TEgmbDbBuWgwZve0/view?usp=sharing
+* [Link to Project Video](https://drive.google.com/file/d/1TawD1rPZjKu5vV11TEgmbDbBuWgwZve0/view?usp=sharing)
 
 ### Technical description
 * Code implemented for Digital Angle Gauge for achieving 45 degree. It was mentioned to implement the code for 45 degree angle where as the current implementation is for 30,45,60 and 90. Also, the idea was very bried with that time.
